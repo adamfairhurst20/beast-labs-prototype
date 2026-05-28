@@ -1,0 +1,261 @@
+/* CRITICAL: THE FOLLOWING TAILWIND IMPORTS MUST NEVER BE DELETED OR REORDERED — DO NOT DELETE THIS COMMENT */
+@import './_designSystem/ds-7fca6c41-9bcc-456c-99de-c2b9580be839/index.css';
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* END TAILWIND IMPORTS — ALL OTHER CSS MUST GO BELOW THIS LINE */
+
+/* --- MANAGED FONT FACES START (do not edit manually) --- */
+/* INTERNAL USE NAME: h1 */
+@font-face {
+  font-family: 'Brik%20XL';
+  src: url('https://cdn.magicpatterns.com/uploads/6yBZ4JWe4EJtfHtRs791qn/Brik XL.woff2');
+  font-display: swap;
+}
+/* INTERNAL USE NAME: h2 */
+@font-face {
+  font-family: 'Brik%20Condensed';
+  src: url('https://cdn.magicpatterns.com/uploads/a8pKLGE6s7AY78RCbDgNze/Brik Condensed.woff2');
+  font-display: swap;
+}
+/* INTERNAL USE NAME: h3 */
+@font-face {
+  font-family: 'Brik%20Condensed';
+  src: url('https://cdn.magicpatterns.com/uploads/e6Ec2VxRt176XiH4GHYoEc/Brik Condensed.woff2');
+  font-display: swap;
+}
+/* INTERNAL USE NAME: h4 */
+@font-face {
+  font-family: 'Oswald VariableFont Wght';
+  src: url('https://cdn.magicpatterns.com/uploads/ioxjBeUPSTVxoTzMcdeLM6/Oswald-VariableFont_wght.ttf');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Oswald VariableFont Wght';
+  src: url('https://cdn.magicpatterns.com/uploads/jxfvxNvNbdH1XAqUY1XxSB/Oswald-VariableFont_wght.ttf');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Oswald VariableFont Wght';
+  src: url('https://cdn.magicpatterns.com/uploads/ooYdZsKJU92gPnK8eFSypS/Oswald-VariableFont_wght.ttf');
+  font-display: swap;
+}
+/* INTERNAL USE NAME: p */
+@font-face {
+  font-family: 'Oswald VariableFont Wght';
+  src: url('https://cdn.magicpatterns.com/uploads/31wGbFMEe6bovqi5QRcfGs/Oswald-VariableFont_wght.ttf');
+  font-display: swap;
+}
+/* --- MANAGED FONT FACES END --- */
+
+/* =========================================================================
+   DESIGN TOKENS — imported from Figma variables.
+   Primitives are raw values. Semantic tokens reference primitives so changes
+   cascade. Existing aliases (--color-ink, --color-surface, etc.) are kept as
+   semantic aliases so all components keep working.
+   ========================================================================= */
+:root {
+  /* --- Primitives: neutral ramp --- */
+  --color-black: #000000;
+  --color-white: #ffffff;
+  --color-grey-900: #232323;
+  --color-grey-800: #141413;
+  --color-grey-500: #566471;
+  --color-grey-300: #c2c2c2;
+  --color-grey-200: #dadada;
+  --color-grey-100: #f2f2f2;
+  /* --- Primitives: blue scale --- */
+  --color-blue-50:  #f3f7fc;
+  --color-blue-100: #e6eef8;
+  --color-blue-200: #c7dcf0;
+  --color-blue-300: #95bee4;
+  --color-blue-400: #5d9cd3;
+  --color-blue-500: #3d86c6;
+  --color-blue-600: #2865a1;
+  --color-blue-700: #215183;
+  --color-blue-800: #1f466d;
+  --color-blue-900: #1f3c5b;
+  --color-blue-950: #14263d;
+  /* --- Primitives: status & brand --- */
+  --color-red-500: #ef0000;
+  --color-beast-accent-gold: #edab3d;
+  --color-beast-accent-blue: #3d86c6;
+  --color-beast-accent-blue-dark: #357ab6;
+  /* --- Primitives: black alphas --- */
+  --color-black-alpha-05: #0000000c;
+  --color-black-alpha-10: #00000019;
+  --color-black-alpha-25: #0000003f;
+  --color-black-alpha-50: #0000007f;
+  --color-black-alpha-75: #000000bf;
+  /* --- Primitives: spacing scale (px) --- */
+  --spacing-0:   0px;
+  --spacing-4:   4px;
+  --spacing-8:   8px;
+  --spacing-10:  10px;
+  --spacing-12:  12px;
+  --spacing-16:  16px;
+  --spacing-20:  20px;
+  --spacing-24:  24px;
+  --spacing-32:  32px;
+  --spacing-40:  40px;
+  --spacing-48:  48px;
+  --spacing-64:  64px;
+  --spacing-80:  80px;
+  --spacing-96:  96px;
+  --spacing-128: 128px;
+  /* --- Primitives: radius --- */
+  --radius-none:   0px;
+  --radius-small:  4px;
+  --radius-medium: 8px;
+  --radius-large:  12px;
+  --radius-pill:   9999px;
+  /* --- Primitives: font sizes --- */
+  --size-12: 12px;
+  --size-13: 13px;
+  --size-14: 14px;
+  --size-15: 15px;
+  --size-16: 16px;
+  --size-18: 18px;
+  --size-20: 20px;
+  --size-24: 24px;
+  --size-28: 28px;
+  --size-30: 30px;
+  --size-32: 32px;
+  --size-34: 34px;
+  --size-36: 36px;
+  --size-40: 40px;
+  --size-48: 48px;
+  /* --- Primitives: stroke --- */
+  --stroke-thin:    1px;
+  --stroke-default: 2px;
+  /* --- Primitives: container widths --- */
+  --width-container-max:             1440px;
+  --width-container-padding-mob:     16px;
+  --width-container-padding-desktop: 80px;
+  /* =========================================================================
+     SEMANTIC TOKENS — reference primitives.
+     ========================================================================= */
+
+  /* Background */
+  --color-bg-body:    var(--color-white);
+  --color-bg-surface: var(--color-grey-100);
+  --color-bg-inverse: var(--color-black);
+  --color-bg-accent:  var(--color-beast-accent-blue);
+  /* Text */
+  --color-text-primary:   var(--color-black);
+  --color-text-secondary: var(--color-grey-500);
+  --color-text-tertiary:  var(--color-grey-300);
+  --color-text-inverse:   var(--color-white);
+  --color-text-accent:    var(--color-beast-accent-blue);
+  --color-text-link:      var(--color-beast-accent-blue-dark);
+  /* Border */
+  --color-border-subtle:  var(--color-black-alpha-10);
+  --color-border-default: var(--color-grey-300);
+  --color-border-strong:  var(--color-black);
+  --color-border-inverse: var(--color-white);
+  --color-border-focus:   var(--color-beast-accent-gold);
+  /* State */
+  --color-state-error:    var(--color-red-500);
+  --color-state-disabled: var(--color-grey-300);
+  /* Overlay */
+  --color-overlay-light: var(--color-black-alpha-50);
+  --color-overlay-dark:  var(--color-black-alpha-75);
+  /* Icon */
+  --color-icon-primary:   var(--color-white);
+  --color-icon-secondary: var(--color-grey-500);
+  --color-icon-inverse:   var(--color-black);
+  --color-icon-accent:    var(--color-beast-accent-gold);
+  --color-icon-disabled:  var(--color-grey-200);
+  /* Button — primary */
+  --color-button-primary-bg-default:   var(--color-black);
+  --color-button-primary-bg-hover:     var(--color-white);
+  --color-button-primary-text:         var(--color-white);
+  --color-button-primary-text-hover:   var(--color-black);
+  --color-button-primary-border:       var(--color-black);
+  /* Button — secondary */
+  --color-button-secondary-bg-default: var(--color-white);
+  --color-button-secondary-bg-hover:   var(--color-grey-100);
+  /* Button — disabled */
+  --color-button-bg-disabled:     var(--color-grey-300);
+  --color-button-border-disabled: var(--color-grey-300);
+  --color-button-text-disabled:   var(--color-grey-200);
+  /* =========================================================================
+     LEGACY ALIASES — keep existing component classNames working.
+     These point at the semantic tokens above.
+     ========================================================================= */
+  --color-ink:           var(--color-text-primary);
+  --color-surface:       var(--color-bg-body);
+  --color-muted:         var(--color-text-secondary);
+  --color-border:        var(--color-border-default);
+  --color-disabled-bg:   var(--color-bg-surface);
+  --color-disabled-text: var(--color-icon-disabled);
+  --color-error:         var(--color-state-error);
+  --color-accent:        var(--color-bg-accent);
+  --color-pill-light:    var(--color-blue-100);
+  --color-pill-mid:      var(--color-blue-200);
+}
+html, body {
+  font-family: 'Oswald VariableFont Wght', 'Oswald', system-ui, -apple-system, sans-serif;
+  color: var(--color-ink);
+}
+/* Force form controls + interactive elements to use the body font.
+   Browsers default these to system fonts and `inherit` can be overridden
+   by other resets, so we set the family explicitly. */
+input, select, textarea, button, optgroup, option, label, fieldset, legend {
+  font-family: 'Oswald VariableFont Wght', 'Oswald', system-ui, -apple-system, sans-serif;
+}
+/* Map native heading + body tags to the managed font families */
+h1 {
+  font-family: 'Brik%20XL', 'Brik Condensed', 'Oswald', 'Impact', sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+h2, h3 {
+  font-family: 'Brik%20Condensed', 'Oswald', 'Impact', sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+h4, h5, h6, p {
+  font-family: 'Oswald VariableFont Wght', 'Oswald', system-ui, sans-serif;
+}
+/* Display utility — uses the biggest Brik weight */
+.font-display {
+  font-family: 'Brik%20XL', 'Brik Condensed', 'Oswald', 'Impact', sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+/* Animated gradient background blobs — slow ambient drift */
+@keyframes gradient-blob-1 {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(8vw, -6vw) scale(1.15);
+  }
+}
+@keyframes gradient-blob-2 {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(-10vw, -4vw) scale(1.1);
+  }
+}
+@keyframes gradient-blob-3 {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(-6vw, -8vw) scale(1.2);
+  }
+}
+.animate-gradient-blob-1 {
+  animation: gradient-blob-1 32s ease-in-out infinite;
+}
+.animate-gradient-blob-2 {
+  animation: gradient-blob-2 38s ease-in-out infinite;
+}
+.animate-gradient-blob-3 {
+  animation: gradient-blob-3 45s ease-in-out infinite;
+}
